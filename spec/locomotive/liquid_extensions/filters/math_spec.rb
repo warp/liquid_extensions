@@ -14,4 +14,13 @@ describe Locomotive::LiquidExtensions::Filters::Math do
 
   end
 
+  describe '#round' do
+
+    it 'returns rounded float' do
+      round('3.14').should eql(3)
+      round(Math::PI, 2).should eql(3.14)
+    end
+
+  end
+
 end
